@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+
+var milli=setInterval(mytimer,1000);
+//1000 milliseconds = 1 second. you can change the timer milliseconds. mytimer is a function as you can see below!!
+
+i=0;
+j=0;
+k=0;
+
+//mytimer function contains the code for performing task
+function mytimer()
+{
+
+
+//TEXT CHANGING
+var fruits=['mango','banana','orange','pineapple','strawberry','apple'];
+document.getElementById('froot').innerHTML=fruits[i];
+i++;
+
+//BACKGROUND COLOR CHANGING
+if(i==fruits.length)
+{
+i=0; 
+}
+
+var colors=['pink','red','green','yellow','blue','teal'];
+document.getElementById('color').style.background=colors[j];
+j++;
+if(j==colors.length)
+{
+j=0; 
+}
+
+//IMAGE CHANGING
+var imgs=['flower1.jpg','flower2.jpg','flower3.jpg','flower4.jpg','flower5.jpg'];
+document.getElementById('img1').alt=imgs[k]; // it is only changing alternating text on image
+k++;
+//document.getElementById('img1').src=imgs[k]; //uncomment this for image result
+
+// place pictures real name inside array with correct format. After doing this, pictures will be changing accordingly.
+
+if(k==imgs.length)
+{
+k=0; 
+}
+
+
+}
+
+//you can apply different ideas.
+
+</script>
+
+
+</head>
+
+<body>
+My Favorite fruits are : <div id="froot"> </div>
+<br/>
+<br/>
+<br/>
+
+<div style=" width:50px; height:50px; display:block;" id="color" >
+HELLO
+</div>
+
+<br/>
+<br/>
+
+<img src="" alt="" id="img1" width="100px" height="100px"/>
+
+</body>
+</html>
