@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+
+
+
+function zoom()
+{
+var text="";
+var i;
+
+for (i = 0; i < 5; i++) {
+    text +=  "<br/> :";
+document.getElementById('img1').width+=i;
+	for(j=0;j<i;j++)
+	{
+	document.getElementById('img1').height+=j;	
+	}
+}
+//document.getElementById("demo").innerHTML = text;
+}
+
+function loom()
+{
+var text="";
+var i;
+
+for (i = 0; i < 5; i++) {
+    text +=  "<br/> :";
+document.getElementById('img1').width-=i;
+	for(j=0;j<i;j++)
+	{
+	document.getElementById('img1').height-=j;	
+	}
+}
+//document.getElementById("demo").innerHTML = text;
+}
+ function mov(event)
+ {
+	 x=event.clientX;
+	 y=event.clientY;
+	 
+
+	 document.getElementById('img1').innerHTML=x;
+	 document.getElementById('img1').innerHTML=y;
+
+
+	 text=x+" : " +y;
+	 document.getElementById('demo').innerHTML=text;
+}
+
+</script>
+
+
+
+
+<style>
+
+
+img{
+	
+	margin-top:0;
+	margin-left:0;
+	}
+
+</style>
+
+</head>
+
+<body>
+<h1>Zoom pic in and out  </h2>
+<img id="img1" src="flower1.jpg" alt="flower" width="100px" height="100px" onwheel="zoom()" onmousemove="mov(event)" />
+
+
+<input type="button" id="btn" value="zoomIn" onclick="zoom()"/>
+<input type="button" id="btn" value="zoomOut" onclick="loom()"/>
+</body>
+
+
+</html>
